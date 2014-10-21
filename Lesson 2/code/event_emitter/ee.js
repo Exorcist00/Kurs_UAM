@@ -23,7 +23,7 @@
 				if(this.listeners[i].nazwa==arguments[0]) {
 					var tab=Array.prototype.slice.call(arguments);
 					tab.splice(0,1);
-					this.listeners[i].metoda.call(this.listeners[i].kontekst);
+					this.listeners[i].metoda.call(this.listeners[i].kontekst,tab);
 				}
 			}
 			
