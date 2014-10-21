@@ -7,15 +7,26 @@
 
 	EE = function () {
 		//store the listeners somewhere
-		this.listeners = {};
+		this.listeners=[];
 	};
 
 	EE.prototype.on = function (eventName, listener, context) {
-
+		var ret=this.listeners.push({
+			nazwa: eventName,
+			metoda: listener,
+			kontekst: context||window});
+		return function(){delete this.listeners[ret-1]};
 	};
 
-	EE.prototype.emit = function (eventName /*, other args...*/) {
-
+	EE.prototype.emit = function (/*eventName /*, other args...*/) {
+			for (i = 0; i < this.listeners.length; i++) {
+				if(this.listeners[i].nazwa==arguments[0]) {
+					var tab=Array.prototype.slice.call(arguments);
+					tab.splice(0,1);
+					this.listeners[i].metoda.call(this.listeners[i].kontekst);
+				}
+			}
+			
 	};
 
 //	var ee = new EE();
