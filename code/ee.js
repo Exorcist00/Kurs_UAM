@@ -1,6 +1,7 @@
 var cl=document.querySelector('.aaa'),
-	but=cl.querySelector('.button'),
-	input=cl.querySelector(".input"),
+	cl2=document.querySelector('.bbb'),
+	but=cl2.querySelector('.button'),
+	input=cl2.querySelector(".input"),
 	lista=cl.querySelector("#list");
 	
 	but.addEventListener('click', function () {

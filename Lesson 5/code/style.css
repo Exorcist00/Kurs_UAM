@@ -11,10 +11,10 @@ div{
 	margin-right:auto;
 	margin-top:5%;
 }
-.bbb{
+.input{
 	width:100%;
 }
-.input{
+.inp{
 	width:79.75%;
 	height:3rem;
 	float:top;
@@ -27,4 +27,10 @@ div{
 	float:right;
 	height:3rem;
 	background:#3498db;
+}
+.footer{
+	width:5rem;
+	height:5rem;
+	float:right;
+	
 }
