@@ -11,15 +11,17 @@ div{
 	margin-right:auto;
 	margin-top:5%;
 }
-.input{
+#inputview{
 	width:100%;
+	height:3rem;
 }
 .inp{
 	width:79.75%;
+	display:inline-block;
 	height:3rem;
 	float:top;
 }
-.button{
+.butt{
 	display:inline-block;
 	text-align:center;
 	font-size:2rem;
@@ -28,9 +30,9 @@ div{
 	height:3rem;
 	background:#3498db;
 }
-.footer{
+.footerview{
 	width:5rem;
 	height:5rem;
-	float:right;
+	float:bottom;
 	
 }
