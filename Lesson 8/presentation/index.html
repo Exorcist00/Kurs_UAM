@@ -209,7 +209,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json());</code></pre>
 <pre><code>
 // Routing: GET /users
-app.get('/users', function (reqeust, response) {
+app.get('/users', function (request, response) {
     //perform some actions here
 });
 
@@ -228,7 +228,7 @@ app.get('/users/:userId', function (request, response) {
             return;
         }</code></pre>
 <pre><code>
-        if (request.is('json')) {
+        if (request.accept('json')) {
             response.json(record);
         } else {
             response.status(406).send('Not Acceptable');
