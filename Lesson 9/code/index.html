@@ -18,9 +18,15 @@
         <div class="list" ng-controller="TodoCtrl">
             <input type="text" class="field" ng-model="inputValue"/><button class="submit" ng-click="addNew()">Add</button>
             <ul>
+<<<<<<< HEAD
                 <li ng-repeat="element in elements" 
 				ng-class="{'inactive':...">
 				</li>
+=======
+                <li ng-repeat="element in elements"
+                ng-class="{'inactive': element.status === false}"
+                ng-click="element.status = false">{{element.value}}</li>
+>>>>>>> upstream/master
             </ul>
         </div>
     </body>
