@@ -29,12 +29,24 @@ body{
 	padding:0;
 	margin:0;
 	border:0;
-	width:80%;
+	width:60%;
 	display:inline-block;
 	height:3rem;
 	float:top;
 }
 .butt{
+	padding:0;
+	margin:0;
+	border:0;
+	display:inline-block;
+	text-align:center;
+	font-size:2rem;
+	width:20%;
+	float:right;
+	height:3rem;
+	background:#3498db;
+}
+.save{
 	padding:0;
 	margin:0;
 	border:0;
