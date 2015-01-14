@@ -13,16 +13,9 @@ app.use(bodyParser.text());
 // parse application/json
 app.use(bodyParser.json());
 
-
+var records = [];
 
 app.get('/api/todos', function (req, res) {
-	var records = [], number = Math.floor(Math.random() * 10) + 3;
-	for (var i = 0; i < number; i++) {
-		records.push({
-			id: i,
-			value: faker.lorem.words(2).join(' ')
-		});
-	}
 	setTimeout(function () {
 		res.json(records);
 	}, 500);
@@ -38,6 +31,12 @@ app.post('/api/todos', function (req, res) {
 		if (!data.length) {
 			throw new Error('Passed array is empty');
 		}
+		for (var i = 0; i < data.length; i++) {
+			records.push({
+				id: data[i].id,
+				value: data[i].value
+			});
+		};
 		res.json({
 			status: true,
 			msg: 'Saved ' + data.length + ' elements'
